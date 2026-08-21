@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "sprint-unbind",
+  "version": "1.0.0",
+  "name": "Sprint Unbind",
+  "description": "Toggles sprint key binding on demand.",
+  "authors": [
+    "YourName"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/sprint-unbind/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.spunb.SprintUnbindClient"
+    ]
+  },
+  "depends": {
+    "fabricloader": "*",
+    "fabric-api": "*",
+    "minecraft": "*"
+  }
+}
