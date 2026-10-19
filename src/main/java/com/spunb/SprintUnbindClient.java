@@ -7,14 +7,13 @@ import net.fabricmc.fabric.api.client.keymapping.v1.KeyMappingHelper;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
-import org.lwjgl.glfw.GLFW;
 
 public class SprintUnbindClient implements ClientModInitializer {
 
     private static KeyMapping toggleKey;
 
     // Default sprint key is Left Shift
-    private static final InputConstants.Key SPRINT_KEY = InputConstants.Type.KEYSYM.getOrCreate(GLFW.GLFW_KEY_LEFT_SHIFT);
+    private static final InputConstants.Key SPRINT_KEY = InputConstants.Type.KEYBOARD.getOrCreate(InputConstants.KEY_LSHIFT);
     private static boolean isUnbound = false;
     private static boolean initializedStartup = false;
 
@@ -23,8 +22,7 @@ public class SprintUnbindClient implements ClientModInitializer {
         // Register toggle keybind under MOVEMENT (default: Right Control)
         toggleKey = KeyMappingHelper.registerKeyMapping(new KeyMapping(
                 "key.sprint_unbind.toggle",
-                InputConstants.Type.KEYSYM,
-                GLFW.GLFW_KEY_RIGHT_CONTROL,
+                InputConstants.KEY_RCONTROL,
                 KeyMapping.Category.MOVEMENT
         ));
 
